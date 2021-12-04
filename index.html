@@ -11,7 +11,7 @@
 // Psuedocode:
 // 1. Declare a variable with 'Rock' 'Paper' and 'Scissors'
 // 2. Determine a random result
-// 3. return result
+// 3. Return result
 // (Check with console.log to make sure this is giving the expected output)
 
 function computerPlay() {
@@ -20,14 +20,28 @@ function computerPlay() {
     console.log(computerChoice);
 }
 
-// Now I need to make a function that plays a single round of the game with a constant player input, for now
+// Now I need to make a function that plays a single round of the game
 // Pseudocode:
-// 1. First, declare variables for playerSelction and computerSelection
+// 1. First, declare variables for playerSelection and computerSelection
 // 2. Create a function that has playerSelection and computerSelection as the parameters (playerSelection case-insensitive)
-// 3. 
+// 3. Prompt player to input
+// 4. If player inputs rock:
+  // And computer input is rock, print 'Draw! Try Again'
+  // And computer input is paper, print 'You Lose! Paper beats Rock'
+  // And computer input is scissors, print 'You Win! Rock beats Scissors'
+// 5. If player input is paper:
+  // And computer input is rock, print 'You Win! Paper beats Rock'
+  // And computer input is paper, print 'Draw! Try Again'
+  // And computer input is scissors, print 'You Lose! Scissors beats Paper'
+// 6. If player input is scissors:
+  // And computer input is rock, print 'You Lose! Rock beats Scissors'
+  // And computer input is paper, print 'You Win!' Scissors beats Paper'
+  // And computer input is scissors, print 'Draw! Try Again'
+// 7. Default answer if none of these are entered, print 'Please enter Rock, Paper, or Scissors'
 
 
 function playRound(playerSelection, computerSelection) {
+
 
 }
 
