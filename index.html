@@ -6,7 +6,20 @@
     </head>
 <body>
 <script>
-    
+
+// So, first off there's the computerPlay function, that will return a random result from rock, paper, or scissors.
+// Psuedocode:
+// 1. Declare a variable with 'Rock' 'Paper' and 'Scissors'
+// 2. Determine a random result
+// 3. Return result
+// (Check with console.log to make sure this is giving the expected output)
+
+function computerPlay() {
+    let rockPaperScissors = ['Rock', 'Paper', 'Scissors'];
+    let computerChoice = rockPaperScissors[Math.floor(Math.random() * rockPaperScissors.length)];
+    return computerChoice;
+}
+
 </script>
 
 
