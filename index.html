@@ -39,12 +39,30 @@ function computerPlay() {
   // And computer input is scissors, print 'Draw! Try Again'
 // 7. Default answer if none of these are entered, print 'Please enter Rock, Paper, or Scissors'
 
-const computerSelection = 'Rock';
+let computerSelection = computerPlay;
 let playerSelection = prompt('Choose Rock, Paper, or Scissors');
 
 function playRound(playerSelection, computerSelection) {
-    if (playerSelection.toLowerCase() == "rock" && computerSelection == 'Rock') {
+    if (playerSelection.toLowerCase() == 'rock' && computerSelection == 'Rock') {
         return ('Draw! Try Again');
+    } else if (playerSelection.toLowerCase() == 'rock' && computerSelection == 'Paper') {
+        return ('You Lose! Paper beats Rock');
+    } else if (playerSelection.toLowerCase() == 'rock' && computerSelection == 'Scissors') {
+        return ('You Win! Rock beats Scissors');
+    } else if (playerSelection.toLowerCase() == 'paper' && computerSelection == 'Rock') {
+        return ('You Win! Paper beats Rock');
+    } else if (playerSelection.toLowerCase() == 'paper' && computerSelection == 'Paper') {
+        return ('Draw! Try Again');
+    } else if (playerSelection.toLowerCase() == 'paper' && computerSelection == 'Scissors') {
+        return ('You Lose! Scissors beats Paper');
+    } else if (playerSelection.toLowerCase() == 'scissors' && computerSelection == 'Rock') {
+        return ('You Lose! Rock beats Scissors');
+    } else if (playerSelection.toLowerCase() == 'scissors' && computerSelection == 'Paper') {
+        return ('You Win! Scissors beats Paper');
+    } else if (playerSelection.toLowerCase() == 'scissors' && computerSelection == 'Scissors') {
+        return ('Draw! Try Again');
+    } else {
+        return ('Please enter Rock, Paper, or Scissors');
     }
 
 
