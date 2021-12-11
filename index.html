@@ -99,7 +99,9 @@ function game() {
   for (let i = 0; i < 5; i++) {
     playerSelection = prompt('Choose Rock, Paper, or Scissors');
     if (playerScore < computerScore) {
-      
+      console.log('You Win the Game! ' + playerScore + ' to ' + computerScore);
+    } else {
+      console.log('You Lose the Game' + computerScore + ' to ' + playerScore);
     }
   }
 
