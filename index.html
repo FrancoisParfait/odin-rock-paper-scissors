@@ -49,18 +49,24 @@ function game() {
       if (playerSelection.toLowerCase() == 'rock' && computerSelection == 'Rock') {
           return ('Draw! Try Again');
       } else if (playerSelection.toLowerCase() == 'rock' && computerSelection == 'Paper') {
+          computerScore++;
           return ('You Lose! Paper beats Rock');
       } else if (playerSelection.toLowerCase() == 'rock' && computerSelection == 'Scissors') {
+          playerScore++;
           return ('You Win! Rock beats Scissors');
       } else if (playerSelection.toLowerCase() == 'paper' && computerSelection == 'Rock') {
+          playerScore++;
           return ('You Win! Paper beats Rock');
       } else if (playerSelection.toLowerCase() == 'paper' && computerSelection == 'Paper') {
           return ('Draw! Try Again');
       } else if (playerSelection.toLowerCase() == 'paper' && computerSelection == 'Scissors') {
+          computerScore++;
           return ('You Lose! Scissors beats Paper');
       } else if (playerSelection.toLowerCase() == 'scissors' && computerSelection == 'Rock') {
+          computerScore++;
           return ('You Lose! Rock beats Scissors');
       } else if (playerSelection.toLowerCase() == 'scissors' && computerSelection == 'Paper') {
+          playerScore++;
           return ('You Win! Scissors beats Paper');
       } else if (playerSelection.toLowerCase() == 'scissors' && computerSelection == 'Scissors') {
           return ('Draw! Try Again');
