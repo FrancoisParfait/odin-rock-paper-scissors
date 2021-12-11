@@ -14,7 +14,7 @@
 // 3. Return result
 // (Check with console.log to make sure this is giving the expected output)
 
-// Moved the computerPlay function into game()
+
 
 // Now I need to make a function that plays a single round of the game
 // Pseudocode:
@@ -36,6 +36,13 @@
 // 7. Default answer if none of these are entered, print 'Please enter Rock, Paper, or Scissors'
 
 
+// Now I need to create a game() function that is able to play 5 rounds of the game and record the results of each round, and declare a winner at the end.
+// Here's what needs to happen, not pseudocode yet:
+// 1. Use the playRound function 5 times inside of this function to go through the game 5 times
+// 2. Create a playerScore function and computerScore function that record results of each round
+// 3. Create a way for a winner to be displayed based on comparing the playerScore and computerScore functions
+
+
 
 
 
@@ -53,7 +60,7 @@ function game() {
 
     function playRound(playerSelection, computerSelection) {
       if (playerSelection.toLowerCase() == 'rock' && computerSelection == 'Rock') {
-          return ('Draw! Try Again');
+          return ('Draw!');
       } else if (playerSelection.toLowerCase() == 'rock' && computerSelection == 'Paper') {
           computerScore++;
           return ('You Lose! Paper beats Rock');
@@ -64,7 +71,7 @@ function game() {
           playerScore++;
           return ('You Win! Paper beats Rock');
       } else if (playerSelection.toLowerCase() == 'paper' && computerSelection == 'Paper') {
-          return ('Draw! Try Again');
+          return ('Draw!');
       } else if (playerSelection.toLowerCase() == 'paper' && computerSelection == 'Scissors') {
           computerScore++;
           return ('You Lose! Scissors beats Paper');
@@ -75,7 +82,7 @@ function game() {
           playerScore++;
           return ('You Win! Scissors beats Paper');
       } else if (playerSelection.toLowerCase() == 'scissors' && computerSelection == 'Scissors') {
-          return ('Draw! Try Again');
+          return ('Draw!');
       } else {
           return ('Please enter Rock, Paper, or Scissors');
       }
@@ -90,16 +97,6 @@ function game() {
   console.log('Computer\'s score is: ' + computerScore);
 
 }
-
-
-
-
-
-// Now I need to create a game() function that is able to play 5 rounds of the game and record the results of each round, and declare a winner at the end.
-// Here's what needs to happen, not pseudocode yet:
-// 1. Use the playRound function 5 times inside of this function to go through the game 5 times
-// 2. Create a playerScore function and computerScore function that record results of each round
-// 3. Create a way for a winner to be displayed based on comparing the playerScore and computerScore functions
 
 
 </script>
