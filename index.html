@@ -59,11 +59,11 @@
       const computerSelection = computerPlay();
 
 
-    function computerPlay() {
-      let rockPaperScissors = ['Rock', 'Paper', 'Scissors'];
-      let computerChoice = rockPaperScissors[Math.floor(Math.random() * rockPaperScissors.length)];
-      return computerChoice;
-  }
+      function computerPlay() {
+        let rockPaperScissors = ['Rock', 'Paper', 'Scissors'];
+        let computerChoice = rockPaperScissors[Math.floor(Math.random() * rockPaperScissors.length)];
+        return computerChoice;
+      }
 
       if (playerSelection.toLowerCase() == 'rock' && computerSelection == 'Rock') {
           numberOfRounds++;
@@ -102,7 +102,7 @@
           return prompt('Please enter Rock, Paper, or Scissors');
       }
       
-      function roundStats () {
+      function roundStats() {
         console.log('You chose: ' + playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1));
         console.log('Computer chose: ' + computerSelection);
         console.log('Your score is: ' + playerScore);
@@ -116,8 +116,11 @@ function game() {
   while (numberOfRounds < 5) {
     playRound();
     if (numberOfRounds === 5 && playerScore > computerScore) {
-      console.log( `Game Over. Your score is ${playerScore} and the Computer's score is ${computerScore}.`);
-      break;
+      console.log(`You Win! Your score is ${playerScore} and the Computer's score is ${computerScore}.`);
+    } else if (numberOfRounds === 5 && playerScore < computerScore) {
+      console.log(`You Lose. Your Score is ${playerScore} and the Computer's score is ${computerScore}.`);
+    } else if (numberOfRounds === 5 && playerScore === computerScore) {
+      console.log(`The game is a tie. Your Score is ${playerScore} and the Computer's score is ${computerScore}.`);
     }
   }
 }
