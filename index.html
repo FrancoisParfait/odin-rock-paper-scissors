@@ -67,54 +67,63 @@
 
       if (playerSelection.toLowerCase() == 'rock' && computerSelection == 'Rock') {
           numberOfRounds++;
-          return ('Draw!');
+          return roundStats();
       } else if (playerSelection.toLowerCase() == 'rock' && computerSelection == 'Paper') {
           computerScore++;
           numberOfRounds++;
-          return ('You Lose! Paper beats Rock');
+          return roundStats();
       } else if (playerSelection.toLowerCase() == 'rock' && computerSelection == 'Scissors') {
           numberOfRounds++;
           playerScore++;
-          return ('You Win! Rock beats Scissors');
+          return roundStats();
       } else if (playerSelection.toLowerCase() == 'paper' && computerSelection == 'Rock') {
           numberOfRounds++;
           playerScore++;
-          return ('You Win! Paper beats Rock');
+          return roundStats();
       } else if (playerSelection.toLowerCase() == 'paper' && computerSelection == 'Paper') {
           numberOfRounds++;
-          return ('Draw!');
+          return roundStats();
       } else if (playerSelection.toLowerCase() == 'paper' && computerSelection == 'Scissors') {
           numberOfRounds++;
           computerScore++;
-          return ('You Lose! Scissors beats Paper');
+          return roundStats();
       } else if (playerSelection.toLowerCase() == 'scissors' && computerSelection == 'Rock') {
           numberOfRounds++;
           computerScore++;
-          return ('You Lose! Rock beats Scissors');
+          return roundStats();
       } else if (playerSelection.toLowerCase() == 'scissors' && computerSelection == 'Paper') {
           numberOfRounds++;
           playerScore++;
-          return ('You Win! Scissors beats Paper');
+          return roundStats();
       } else if (playerSelection.toLowerCase() == 'scissors' && computerSelection == 'Scissors') {
           numberOfRounds++;
-          return ('Draw!');
+          return roundStats();
       } else {
-          return ('Please enter Rock, Paper, or Scissors');
+          return prompt('Please enter Rock, Paper, or Scissors');
       }
+      
+      function roundStats () {
+        console.log('You chose: ' + playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1));
+        console.log('Computer chose: ' + computerSelection);
+        console.log('Your score is: ' + playerScore);
+        console.log('Computer\'s score is: ' + computerScore);
+      }
+
+
     }
 
 function game() {
   while (numberOfRounds < 5) {
     playRound();
-    if (numberOfRounds === 5) {
-      console.log(
-        `Game Over. Your score is ${playerScore} and the Computer's score is ${computerScore}.`
-      );
+    if (numberOfRounds === 5 && playerScore > computerScore) {
+      console.log( `Game Over. Your score is ${playerScore} and the Computer's score is ${computerScore}.`);
       break;
     }
   }
 }
 game();
+
+  
 
 
 </script>
