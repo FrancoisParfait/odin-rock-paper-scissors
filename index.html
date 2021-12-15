@@ -64,28 +64,37 @@ function game() {
       const computerSelection = computerPlay();
 
       if (playerSelection.toLowerCase() == 'rock' && computerSelection == 'Rock') {
+          numberOfRounds++;
           return ('Draw!');
       } else if (playerSelection.toLowerCase() == 'rock' && computerSelection == 'Paper') {
           computerScore++;
+          numberOfRounds++;
           return ('You Lose! Paper beats Rock');
       } else if (playerSelection.toLowerCase() == 'rock' && computerSelection == 'Scissors') {
+          numberOfRounds++;
           playerScore++;
           return ('You Win! Rock beats Scissors');
       } else if (playerSelection.toLowerCase() == 'paper' && computerSelection == 'Rock') {
+          numberOfRounds++;
           playerScore++;
           return ('You Win! Paper beats Rock');
       } else if (playerSelection.toLowerCase() == 'paper' && computerSelection == 'Paper') {
+          numberOfRounds++;
           return ('Draw!');
       } else if (playerSelection.toLowerCase() == 'paper' && computerSelection == 'Scissors') {
+          numberOfRounds++;
           computerScore++;
           return ('You Lose! Scissors beats Paper');
       } else if (playerSelection.toLowerCase() == 'scissors' && computerSelection == 'Rock') {
+          numberOfRounds++;
           computerScore++;
           return ('You Lose! Rock beats Scissors');
       } else if (playerSelection.toLowerCase() == 'scissors' && computerSelection == 'Paper') {
+          numberOfRounds++;
           playerScore++;
           return ('You Win! Scissors beats Paper');
       } else if (playerSelection.toLowerCase() == 'scissors' && computerSelection == 'Scissors') {
+          numberOfRounds++;
           return ('Draw!');
       } else {
           return ('Please enter Rock, Paper, or Scissors');
