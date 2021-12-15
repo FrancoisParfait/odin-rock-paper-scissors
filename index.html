@@ -46,7 +46,7 @@
 
 
 
-function game() {
+
 
   function computerPlay() {
     let rockPaperScissors = ['Rock', 'Paper', 'Scissors'];
@@ -106,12 +106,18 @@ function game() {
       console.log('Computer\'s score is: ' + computerScore);
     }
 
-
-
-
-
+function game() {
+  while (numberOfRounds < 5) {
+    playRound();
+    if (numberOfRounds === 5) {
+      console.log(
+        `Game Over. Your score is ${playerScore} and the Computer's score is ${computerScore}.`
+      );
+      break;
+    }
+  }
 }
-
+game();
 
 
 </script>
