@@ -30,3 +30,13 @@ I'm a little disappointed in myself for not staying away from solutions complete
 I also think I need to get into asking questions on the discord for Odin, or stack overflow. I did hit a point where I was at my wit's end, and asking a question would've helped, I just didn't know how to phrase it and didn't want to come off the wrong way, I guess. But it definitely could've helped having other eyes on my code to point out obvious or not obvious things that I'm missing. 
 
 Anyway, glad to be done. The game works as intended, and I'm happy to be moving on.
+
+
+
+REVISIT:
+
+Okay, so I'm back to this project now after a break with some other lessons. This time, I'm going to attempt to add a UI to the game so that it's not just played inside of the console.
+
+As always, I'm feeling pretty confident at the start that this won't be too difficult. But at the same time, I also know that's probably not true, as it hasn't been with every project, haha.
+
+Again, I'm just going to try to apply the problem-solving skills I've been working on so far to this, and avoid looking up solutions and such before I get it working. We'll see how it goes!
