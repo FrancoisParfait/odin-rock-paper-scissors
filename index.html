@@ -7,10 +7,11 @@
     </head>
 <body>
 
-  
-
-
-
+  <h1>Rock Paper Scissors</h1>
+  <p>Choose your Weapon</p>
+  <button>Rock</button>
+  <button>Paper</button>
+  <button>Scissors</button>
 
 <script>
 
@@ -73,11 +74,16 @@
         console.log('Your score is: ' + playerScore);
         console.log('Computer\'s score is: ' + computerScore);
       }
-
-
     }
 
-function game() {
+
+
+
+
+
+
+
+    function game() {
   while (numberOfRounds < 5) {
     playRound();
     if (numberOfRounds === 5 && playerScore > computerScore) {
@@ -89,7 +95,6 @@ function game() {
     }
   }
 }
-game();
 
   
 
