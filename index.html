@@ -51,31 +51,34 @@
         }
       } 
       
+      if (playerSelection == 'paper') {
+        if (computerSelection == 'rock') {
+          numberOfRounds++;
+          playerScore++;
+          return roundStats();
+        } else if (computerSelection == 'scissors') {
+          numberOfRounds++;
+          computerScore++;
+          return roundStats();
+        } else {
+          numberOfRounds++;
+          return roundStats();
+        }
+      }
       
-      else if (playerSelection == 'paper' && computerSelection == 'rock') {
+      if (playerSelection == 'scissors') {
+        if (computerSelection == 'paper') {
           numberOfRounds++;
           playerScore++;
           return roundStats();
-      } else if (playerSelection == 'paper' && computerSelection == 'paper') {
-          numberOfRounds++;
-          return roundStats();
-      } else if (playerSelection == 'paper' && computerSelection == 'scissors') {
+        } else if (computerSelection == 'rock') {
           numberOfRounds++;
           computerScore++;
           return roundStats();
-      } else if (playerSelection == 'scissors' && computerSelection == 'rock') {
-          numberOfRounds++;
-          computerScore++;
+        } else {
+          numberofRounds++;
           return roundStats();
-      } else if (playerSelection == 'scissors' && computerSelection == 'paper') {
-          numberOfRounds++;
-          playerScore++;
-          return roundStats();
-      } else if (playerSelection == 'scissors' && computerSelection == 'scissors') {
-          numberOfRounds++;
-          return roundStats();
-      } else {
-          return prompt('Please enter Rock, Paper, or Scissors');
+        }
       }
       
       function roundStats() {
