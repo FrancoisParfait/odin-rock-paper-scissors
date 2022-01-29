@@ -31,37 +31,39 @@
         return computerChoice;
       }
 
-      if (playerSelection.toLowerCase() == 'rock' && computerSelection == 'Rock') {
+      playerSelection = playerSelection.toLowerCase();
+
+      if (playerSelection == 'rock' && computerSelection == 'Rock') {
           numberOfRounds++;
           return roundStats();
-      } else if (playerSelection.toLowerCase() == 'rock' && computerSelection == 'Paper') {
+      } else if (playerSelection == 'rock' && computerSelection == 'Paper') {
           computerScore++;
           numberOfRounds++;
           return roundStats();
-      } else if (playerSelection.toLowerCase() == 'rock' && computerSelection == 'Scissors') {
+      } else if (playerSelection == 'rock' && computerSelection == 'Scissors') {
           numberOfRounds++;
           playerScore++;
           return roundStats();
-      } else if (playerSelection.toLowerCase() == 'paper' && computerSelection == 'Rock') {
+      } else if (playerSelection == 'paper' && computerSelection == 'Rock') {
           numberOfRounds++;
           playerScore++;
           return roundStats();
-      } else if (playerSelection.toLowerCase() == 'paper' && computerSelection == 'Paper') {
+      } else if (playerSelection == 'paper' && computerSelection == 'Paper') {
           numberOfRounds++;
           return roundStats();
-      } else if (playerSelection.toLowerCase() == 'paper' && computerSelection == 'Scissors') {
+      } else if (playerSelection == 'paper' && computerSelection == 'Scissors') {
           numberOfRounds++;
           computerScore++;
           return roundStats();
-      } else if (playerSelection.toLowerCase() == 'scissors' && computerSelection == 'Rock') {
+      } else if (playerSelection == 'scissors' && computerSelection == 'Rock') {
           numberOfRounds++;
           computerScore++;
           return roundStats();
-      } else if (playerSelection.toLowerCase() == 'scissors' && computerSelection == 'Paper') {
+      } else if (playerSelection == 'scissors' && computerSelection == 'Paper') {
           numberOfRounds++;
           playerScore++;
           return roundStats();
-      } else if (playerSelection.toLowerCase() == 'scissors' && computerSelection == 'Scissors') {
+      } else if (playerSelection == 'scissors' && computerSelection == 'Scissors') {
           numberOfRounds++;
           return roundStats();
       } else {
