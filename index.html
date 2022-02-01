@@ -10,22 +10,50 @@
   <h1>Rock Paper Scissors</h1>
   <p>Choose your Weapon</p>
 
-  <button id="rockbtn">Rock</button>
-  <button id="paperbtn">Paper</button>
-  <button id="scissorsbtn">Scissors</button>
+  <button id="rockBtn">Rock</button>
+  <button id="paperBtn">Paper</button>
+  <button id="scissorsBtn">Scissors</button>
+
+  <div id="scores">
+    <div class="pScore"></div>
+    <div class="cScore"></div>
+  </div>
 
 <script>
 
-  let playerSelection = prompt('Do you choose Rock, Paper, or Scissors?');
+  const scores = document.querySelector('#scores');
 
-  const computerSelection = computerPlay();
-  function computerPlay() {
-      let rockPaperScissors = ['rock', 'paper', 'scissors'];
-      let computerChoice = rockPaperScissors[Math.floor(Math.random() * rockPaperScissors.length)];
-      return computerChoice;
-    }
+  const content = document.createElement('pScore');
+  content.classList.add('content');
+  content.textContent = 'Your Score is:';
 
-  function playRound(playerSelection, computerSelection) {
+  scores.appendChild(content);
+
+
+  const rockBtn = document.querySelector('#rockBtn');
+  rockBtn.addEventListener('click', () => {
+    playRound('rock');
+  });
+
+  const paperBtn = document.querySelector('#paperBtn');
+  paperBtn.addEventListener('click', () => {
+    playRound('paper');
+  });
+
+  const scissorsBtn = document.querySelector('#scissorsBtn');
+  scissorsBtn.addEventListener('click', () => {
+    playRound('scissors');
+  });
+
+
+  function playRound(playerSelection) {
+
+    const computerSelection = computerPlay();
+    function computerPlay() {
+    let rockPaperScissors = ['rock', 'paper', 'scissors'];
+    let computerChoice = rockPaperScissors[Math.floor(Math.random() * rockPaperScissors.length)];
+    return computerChoice;
+  }
 
     let computerScore = 0;
     let playerScore = 0;
@@ -71,7 +99,7 @@
         computerScore++;
         return roundStats();
       } else {
-        numberofRounds++;
+        numberOfRounds++;
         return roundStats();
       }
     }
