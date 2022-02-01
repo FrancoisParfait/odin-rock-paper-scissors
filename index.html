@@ -16,25 +16,22 @@
 
 <script>
 
-  function playRound() {
+  let playerSelection = prompt('Do you choose Rock, Paper, or Scissors?');
 
-    let computerScore = 0;
-    let playerScore = 0;
-    let numberOfRounds = 0;
-
-    let playerSelection = prompt('Choose Rock, Paper, or Scissors');
-    const computerSelection = computerPlay();
-
-
-    function computerPlay() {
+  const computerSelection = computerPlay();
+  function computerPlay() {
       let rockPaperScissors = ['rock', 'paper', 'scissors'];
       let computerChoice = rockPaperScissors[Math.floor(Math.random() * rockPaperScissors.length)];
       return computerChoice;
     }
 
-    playerSelection = playerSelection.toLowerCase();
+  function playRound(playerSelection, computerSelection) {
 
-     if (playerSelection == 'rock') {
+    let computerScore = 0;
+    let playerScore = 0;
+    let numberOfRounds = 0;
+
+    if (playerSelection == 'rock') {
       if (computerSelection == 'scissors') {
         numberOfRounds++;
         playerScore++;
@@ -78,11 +75,10 @@
         return roundStats();
       }
     }
-
-      
+  
     function roundStats() {
       console.log('You chose: ' + playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1));
-      console.log('Computer chose: ' + computerSelection);
+      console.log('Computer chose: ' + computerSelection.charAt(0).toUpperCase() + computerSelection.slice(1));
       console.log('Your score is: ' + playerScore);
       console.log('Computer\'s score is: ' + computerScore);
     }
