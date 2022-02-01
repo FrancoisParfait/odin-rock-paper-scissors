@@ -16,78 +16,77 @@
 
 <script>
 
- 
+  function playRound() {
 
-    function playRound() {
+    let computerScore = 0;
+    let playerScore = 0;
+    let numberOfRounds = 0;
 
-      let computerScore = 0;
-      let playerScore = 0;
-      let numberOfRounds = 0;
-
-      let playerSelection = prompt('Choose Rock, Paper, or Scissors');
-      const computerSelection = computerPlay();
+    let playerSelection = prompt('Choose Rock, Paper, or Scissors');
+    const computerSelection = computerPlay();
 
 
-      function computerPlay() {
-        let rockPaperScissors = ['rock', 'paper', 'scissors'];
-        let computerChoice = rockPaperScissors[Math.floor(Math.random() * rockPaperScissors.length)];
-        return computerChoice;
+    function computerPlay() {
+      let rockPaperScissors = ['rock', 'paper', 'scissors'];
+      let computerChoice = rockPaperScissors[Math.floor(Math.random() * rockPaperScissors.length)];
+      return computerChoice;
+    }
+
+    playerSelection = playerSelection.toLowerCase();
+
+     if (playerSelection == 'rock') {
+      if (computerSelection == 'scissors') {
+        numberOfRounds++;
+        playerScore++;
+        return roundStats();
+      } else if (computerSelection == 'paper') {
+        numberOfRounds++;
+        computerScore++;
+        return roundStats();
+      } else {
+        numberOfRounds++;
+        return roundStats();
       }
-
-      playerSelection = playerSelection.toLowerCase();
-
-      if (playerSelection == 'rock') {
-        if (computerSelection == 'scissors') {
-          numberOfRounds++;
-          playerScore++;
-          return roundStats();
-        } else if (computerSelection == 'paper') {
-          numberOfRounds++;
-          computerScore++;
-          return roundStats();
-        } else {
-          numberOfRounds++;
-          return roundStats();
-        }
-      } 
+    } 
       
-      if (playerSelection == 'paper') {
-        if (computerSelection == 'rock') {
-          numberOfRounds++;
-          playerScore++;
-          return roundStats();
-        } else if (computerSelection == 'scissors') {
-          numberOfRounds++;
-          computerScore++;
-          return roundStats();
-        } else {
-          numberOfRounds++;
-          return roundStats();
-        }
-      }
-      
-      if (playerSelection == 'scissors') {
-        if (computerSelection == 'paper') {
-          numberOfRounds++;
-          playerScore++;
-          return roundStats();
-        } else if (computerSelection == 'rock') {
-          numberOfRounds++;
-          computerScore++;
-          return roundStats();
-        } else {
-          numberofRounds++;
-          return roundStats();
-        }
-      }
-      
-      function roundStats() {
-        console.log('You chose: ' + playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1));
-        console.log('Computer chose: ' + computerSelection);
-        console.log('Your score is: ' + playerScore);
-        console.log('Computer\'s score is: ' + computerScore);
+    if (playerSelection == 'paper') {
+      if (computerSelection == 'rock') {
+        numberOfRounds++;
+        playerScore++;
+        return roundStats();
+      } else if (computerSelection == 'scissors') {
+        numberOfRounds++;
+        computerScore++;
+        return roundStats();
+      } else {
+        numberOfRounds++;
+        return roundStats();
       }
     }
+      
+    if (playerSelection == 'scissors') {
+      if (computerSelection == 'paper') {
+        numberOfRounds++;
+        playerScore++;
+        return roundStats();
+      } else if (computerSelection == 'rock') {
+        numberOfRounds++;
+        computerScore++;
+        return roundStats();
+      } else {
+        numberofRounds++;
+        return roundStats();
+      }
+    }
+
+      
+    function roundStats() {
+      console.log('You chose: ' + playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1));
+      console.log('Computer chose: ' + computerSelection);
+      console.log('Your score is: ' + playerScore);
+      console.log('Computer\'s score is: ' + computerScore);
+    }
+  }
 
 </script>
 
