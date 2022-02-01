@@ -21,13 +21,23 @@
 
 <script>
 
+  let computerScore = 0;
+  let playerScore = 0;
+  let numberOfRounds = 0;
+
   const scores = document.querySelector('#scores');
 
-  const content = document.createElement('pScore');
-  content.classList.add('content');
-  content.textContent = 'Your Score is:';
+  const pScore = document.createElement('pScore');
+  pScore.classList.add('pScore');
+  pScore.textContent = 'Your Score is: ' + `${playerScore} `;
 
-  scores.appendChild(content);
+  scores.appendChild(pScore);
+
+  const cScore = document.createElement('cScore');
+  cScore.classList.add('cScore');
+  cScore.textContent = 'Computer\'s Score is: ' + `${computerScore}`;
+
+  scores.appendChild(cScore);
 
 
   const rockBtn = document.querySelector('#rockBtn');
@@ -54,10 +64,6 @@
     let computerChoice = rockPaperScissors[Math.floor(Math.random() * rockPaperScissors.length)];
     return computerChoice;
   }
-
-    let computerScore = 0;
-    let playerScore = 0;
-    let numberOfRounds = 0;
 
     if (playerSelection == 'rock') {
       if (computerSelection == 'scissors') {
@@ -111,6 +117,8 @@
       console.log('Computer\'s score is: ' + computerScore);
     }
   }
+
+ 
 
 </script>
 
