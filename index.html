@@ -19,6 +19,7 @@
   <div id="cScore"></div>
   <div id="playerWin"></div>
   <div id="compWin"></div>
+  <div id="tieGame"></div>
 
 <script>
 
@@ -52,14 +53,11 @@
 
   function roundWin() {
     if (numberOfRounds == 5 && playerScore > computerScore) {
-      alert('You win the Game!');
-      location.reload();
+      document.getElementById("playerWin").innerHTML = "You Win the Game!";
     } else if (numberOfRounds == 5 && playerScore < computerScore) {
-      alert('You lose the Game :(');
-      location.reload();
+      document.getElementById("compWin").innerHTML = "You Lose the Game :(";
     } else if (numberOfRounds == 5 && playerScore == computerScore) {
-      alert('The game is a Tie.');
-      location.reload();
+      document.getElementById("tieGame").innerHTML = "The Game is a Tie.";
     }
   }
 
