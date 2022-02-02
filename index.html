@@ -8,7 +8,7 @@
 <body>
 
   <h1>Rock Paper Scissors</h1>
-  <p>Choose your Weapon</p>
+  <p>CHOOSE YOUR WEAPON</p>
 
   <button id="rockBtn">Rock</button>
   <button id="paperBtn">Paper</button>
@@ -89,7 +89,7 @@
     function computerPlay() {
       let rockPaperScissors = ['rock', 'paper', 'scissors'];
       let computerChoice = rockPaperScissors[Math.floor(Math.random() * rockPaperScissors.length)];
-      document.getElementById("compChoice").innerHTML = "Computer chose: " + computerChoice;
+      document.getElementById("compChoice").innerHTML = "Computer chose: " + computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1);
       return computerChoice;
     }
 
