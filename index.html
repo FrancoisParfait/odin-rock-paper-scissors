@@ -14,14 +14,18 @@
   <button id="paperBtn">Paper</button>
   <button id="scissorsBtn">Scissors</button>
 
+  <div id="compChoice"></div>
   <div id="pScore"></div>
   <div id="cScore"></div>
+  <div id="playerWin"></div>
+  <div id="compWin"></div>
 
 <script>
 
   let computerScore = 0;
   let playerScore = 0;
   let numberOfRounds = 0;
+
 
   //const scores = document.querySelector('#scores');
 
@@ -46,30 +50,47 @@
     roundStats();
   }
 
+  function roundWin() {
+    if (numberOfRounds == 5 && playerScore > computerScore) {
+      alert('You win the Game!');
+      location.reload();
+    } else if (numberOfRounds == 5 && playerScore < computerScore) {
+      alert('You lose the Game :(');
+      location.reload();
+    } else if (numberOfRounds == 5 && playerScore == computerScore) {
+      alert('The game is a Tie.');
+      location.reload();
+    }
+  }
 
   const rockBtn = document.querySelector('#rockBtn');
   rockBtn.addEventListener('click', () => {
     playRound('rock');
+    roundWin();
   });
 
   const paperBtn = document.querySelector('#paperBtn');
   paperBtn.addEventListener('click', () => {
     playRound('paper');
+    roundWin();
   });
 
   const scissorsBtn = document.querySelector('#scissorsBtn');
   scissorsBtn.addEventListener('click', () => {
     playRound('scissors');
+    roundWin();
   });
 
 
   function playRound(playerSelection) {
 
     const computerSelection = computerPlay();
+    
     function computerPlay() {
-    let rockPaperScissors = ['rock', 'paper', 'scissors'];
-    let computerChoice = rockPaperScissors[Math.floor(Math.random() * rockPaperScissors.length)];
-    return computerChoice;
+      let rockPaperScissors = ['rock', 'paper', 'scissors'];
+      let computerChoice = rockPaperScissors[Math.floor(Math.random() * rockPaperScissors.length)];
+      document.getElementById("compChoice").innerHTML = "Computer chose: " + computerChoice;
+      return computerChoice;
     }
 
     if (playerSelection == 'rock') {
@@ -116,18 +137,7 @@
         return roundStats();
       }
     }
-
-
-  
-    // function roundStats() {
-      // console.log('You chose: ' + playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1));
-      // console.log('Computer chose: ' + computerSelection.charAt(0).toUpperCase() + computerSelection.slice(1));
-      // console.log('Your score is: ' + playerScore);
-      // console.log('Computer\'s score is: ' + computerScore);
-    // }
   }
-
- 
 
 </script>
 
