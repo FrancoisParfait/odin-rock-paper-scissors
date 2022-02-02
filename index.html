@@ -14,10 +14,8 @@
   <button id="paperBtn">Paper</button>
   <button id="scissorsBtn">Scissors</button>
 
-  <div id="scores">
-    <div class="pScore"></div>
-    <div class="cScore"></div>
-  </div>
+  <div id="pScore"></div>
+  <div id="cScore"></div>
 
 <script>
 
@@ -25,23 +23,23 @@
   let playerScore = 0;
   let numberOfRounds = 0;
 
-  const scores = document.querySelector('#scores');
+  //const scores = document.querySelector('#scores');
 
-  const pScore = document.createElement('pScore');
-  pScore.classList.add('pScore');
-  pScore.textContent = 'Your Score is: ' + `${playerScore} `;
+  //const pScore = document.createElement('pScore');
+  //pScore.classList.add('pScore');
+  //pScore.textContent = 'Your Score is: ' + `${playerScore} `;
 
-  scores.appendChild(pScore);
+  //scores.appendChild(pScore);
 
-  const cScore = document.createElement('cScore');
-  cScore.classList.add('cScore');
-  cScore.textContent = 'Computer\'s Score is: ' + `${computerScore}`;
+  //const cScore = document.createElement('cScore');
+  //cScore.classList.add('cScore');
+  //cScore.textContent = 'Computer\'s Score is: ' + `${computerScore}`;
 
-  scores.appendChild(cScore);
+  //scores.appendChild(cScore);
 
   function roundStats() {
-    document.getElementById("pScore").innerText = "Your Score is: " + playerScore;
-    document.getElementById("cScore").innerText = "Computer\'s Score is: " + computerScore;
+    document.getElementById("pScore").innerHTML = "Your Score is: " + playerScore;
+    document.getElementById("cScore").innerHTML = "Computer\'s Score is: " + computerScore;
   }
 
 
