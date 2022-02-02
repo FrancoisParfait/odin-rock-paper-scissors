@@ -39,6 +39,11 @@
 
   scores.appendChild(cScore);
 
+  function roundStats() {
+    document.getElementById("pScore").innerText = "Your Score is: " + playerScore;
+    document.getElementById("cScore").innerText = "Computer\'s Score is: " + computerScore;
+  }
+
 
   const rockBtn = document.querySelector('#rockBtn');
   rockBtn.addEventListener('click', () => {
@@ -63,7 +68,7 @@
     let rockPaperScissors = ['rock', 'paper', 'scissors'];
     let computerChoice = rockPaperScissors[Math.floor(Math.random() * rockPaperScissors.length)];
     return computerChoice;
-  }
+    }
 
     if (playerSelection == 'rock') {
       if (computerSelection == 'scissors') {
@@ -109,13 +114,15 @@
         return roundStats();
       }
     }
+
+
   
-    function roundStats() {
-      console.log('You chose: ' + playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1));
-      console.log('Computer chose: ' + computerSelection.charAt(0).toUpperCase() + computerSelection.slice(1));
-      console.log('Your score is: ' + playerScore);
-      console.log('Computer\'s score is: ' + computerScore);
-    }
+    // function roundStats() {
+      // console.log('You chose: ' + playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1));
+      // console.log('Computer chose: ' + computerSelection.charAt(0).toUpperCase() + computerSelection.slice(1));
+      // console.log('Your score is: ' + playerScore);
+      // console.log('Computer\'s score is: ' + computerScore);
+    // }
   }
 
  
