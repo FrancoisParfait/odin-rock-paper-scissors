@@ -20,6 +20,7 @@
   <div id="playerWin"></div>
   <div id="compWin"></div>
   <div id="tieGame"></div>
+  <div id="playAgain"></div>
 
 <script>
 
@@ -51,13 +52,20 @@
     roundStats();
   }
 
+  function playAgainButton() {
+    document.getElementById("playAgain").innerHTML = '<button onclick="location.reload()">Play Again?</button>';
+  }
+
   function roundWin() {
     if (numberOfRounds == 5 && playerScore > computerScore) {
       document.getElementById("playerWin").innerHTML = "You Win the Game!";
+      playAgainButton();
     } else if (numberOfRounds == 5 && playerScore < computerScore) {
       document.getElementById("compWin").innerHTML = "You Lose the Game :(";
+      playAgainButton();
     } else if (numberOfRounds == 5 && playerScore == computerScore) {
       document.getElementById("tieGame").innerHTML = "The Game is a Tie.";
+      playAgainButton();
     }
   }
 
