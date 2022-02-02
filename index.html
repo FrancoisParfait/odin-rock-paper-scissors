@@ -41,17 +41,26 @@
     document.getElementById("playAgain").innerHTML = '<button onclick="location.reload()">Play Again?</button>';
   }
 
+  function buttonDisable() {
+    document.getElementById("rockBtn").disabled = true;
+    document.getElementById("paperBtn").disabled = true;
+    document.getElementById("scissorsBtn").disabled = true;
+  }
+
   function roundWin() {
     if (numberOfRounds == 5 && playerScore > computerScore) {
       document.getElementById("playerWin").innerHTML = "You Win the Game!";
+      buttonDisable();
       playAgainButton();
     } else if (numberOfRounds == 5 && playerScore < computerScore) {
       document.getElementById("compWin").innerHTML = "You Lose the Game :(";
+      buttonDisable();
       playAgainButton();
     } else if (numberOfRounds == 5 && playerScore == computerScore) {
       document.getElementById("tieGame").innerHTML = "The Game is a Tie.";
+      buttonDisable();
       playAgainButton();
-    }
+    } 
   }
 
   const rockBtn = document.querySelector('#rockBtn');
