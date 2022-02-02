@@ -42,6 +42,10 @@
     document.getElementById("cScore").innerHTML = "Computer\'s Score is: " + computerScore;
   }
 
+  window.onload = function () {
+    roundStats();
+  }
+
 
   const rockBtn = document.querySelector('#rockBtn');
   rockBtn.addEventListener('click', () => {
