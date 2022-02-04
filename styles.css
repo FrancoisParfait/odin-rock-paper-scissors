@@ -1,8 +1,6 @@
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin: 0;
 }
 
 .container {
@@ -10,5 +8,8 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    height: 100vh;
 }
+
+
 
