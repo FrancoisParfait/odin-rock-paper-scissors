@@ -1,6 +1,8 @@
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin: 0;
+    background-image: url("mountains-2.jpg");
+    background-color: #cccccc;
 }
 
 .container {
@@ -30,7 +32,7 @@ button {
 }
 
 .compChoice {
-    margin: 10px;
+    margin: 10px
 }
 
 .playAgainBtn {
