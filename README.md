@@ -40,3 +40,14 @@ Okay, so I'm back to this project now after a break with some other lessons. Thi
 As always, I'm feeling pretty confident at the start that this won't be too difficult. But at the same time, I also know that's probably not true, as it hasn't been with every project, haha.
 
 Again, I'm just going to try to apply the problem-solving skills I've been working on so far to this, and avoid looking up solutions and such before I get it working. We'll see how it goes!
+
+
+POST-REVISIT:
+
+Alright, that actually went super well!
+
+I actually had to change my original code quite a bit from how it was. This included changing it to including playerSelection as a parameter, since that was necessary for the buttons to work with pre-loaded selections. So that took a bit of time, but I actually was able to do it pretty much all on my own, with Google providing some help here and there. Didn't look up any solutions or copy/paste code, so that was nice!
+
+CSS continues to be a bit annoying, and the styling took a little while. Styling this is also kind of a black hole because you could always make it look nicer, so I opted for a pretty simply design for now. Who knows, maybe I'll come back later and make it look cooler. 
+
+But all in all, the revisit went very well, and I feel like I did a good amount of problem solving on it! On to the next project.
