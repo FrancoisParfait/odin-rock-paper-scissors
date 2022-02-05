@@ -17,15 +17,18 @@
       <button id="scissorsBtn">Scissors</button>
     </div>
 
-    <div id="playerChoice"></div>
-    <div id="compChoice"></div>
+
+    <div class="choices">
+      <div id="playerChoice"></div>
+      <div id="compChoice"></div>
+    </div>
 
     <div class="scores">
       <div id="pScore"></div>
       <div id="cScore"></div>
     </div>
 
-    <div class="game-results">
+    <div class="gameResults">
       <div id="playerWin"></div>
       <div id="compWin"></div>
       <div id="tieGame"></div>
@@ -63,15 +66,15 @@
 
   function roundWin() {
     if (playerScore == 5) {
-      document.getElementById("playerWin").innerHTML = "You Win the Game!";
+      document.getElementById("playerWin").innerHTML = "You Win the Game! &#128513";
       buttonDisable();
       playAgainButton();
     } else if (computerScore == 5) {
-      document.getElementById("compWin").innerHTML = "You Lose the Game :(";
+      document.getElementById("compWin").innerHTML = "You Lose the Game &#128557";
       buttonDisable();
       playAgainButton();
     } else if (playerScore == 5 && computerScore == 5) {
-      document.getElementById("tieGame").innerHTML = "The Game is a Tie.";
+      document.getElementById("tieGame").innerHTML = "The Game is a Tie. &#128528";
       buttonDisable();
       playAgainButton();
     } 
@@ -117,7 +120,6 @@
         computerScore++;
         return roundStats();
       } else {
-        numberOfRounds++;
         return roundStats();
       }
     } 
@@ -130,7 +132,6 @@
         computerScore++;
         return roundStats();
       } else {
-        numberOfRounds++;
         return roundStats();
       }
     }
