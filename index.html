@@ -17,12 +17,13 @@
       <button id="scissorsBtn">Scissors</button>
     </div>
 
+    <div id="playerChoice"></div>
+    <div id="compChoice"></div>
+
     <div class="scores">
       <div id="pScore"></div>
       <div id="cScore"></div>
     </div>
-
-    <div id="compChoice"></div>
 
     <div class="game-results">
       <div id="playerWin"></div>
@@ -96,6 +97,8 @@
 
 
   function playRound(playerSelection) {
+
+    document.getElementById("playerChoice").innerHTML = "You chose: " + playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1);
 
     const computerSelection = computerPlay();
     
