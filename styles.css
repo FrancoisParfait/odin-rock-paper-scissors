@@ -51,7 +51,7 @@ button {
 }
 
 .playAgainBtn {
-    display: flex;
+    margin: 10px;
 }
 
 .scores {
