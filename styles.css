@@ -33,7 +33,9 @@ p {
 }
 
 button {
-    width: 90px;
+    display: inline-block;
+    padding-right: 10px;
+    padding-left: 10px;
     height: 30px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 17px;
@@ -68,6 +70,8 @@ button {
 
 .gameResults {
     padding-bottom: 15px;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 
