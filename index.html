@@ -40,7 +40,6 @@
 
   let computerScore = 0;
   let playerScore = 0;
-  let numberOfRounds = 0;
 
   function roundStats() {
     document.getElementById("pScore").innerHTML = "Your Score is: " + playerScore;
@@ -62,15 +61,15 @@
   }
 
   function roundWin() {
-    if (numberOfRounds == 5 && playerScore > computerScore) {
+    if (playerScore == 5) {
       document.getElementById("playerWin").innerHTML = "You Win the Game!";
       buttonDisable();
       playAgainButton();
-    } else if (numberOfRounds == 5 && playerScore < computerScore) {
+    } else if (computerScore == 5) {
       document.getElementById("compWin").innerHTML = "You Lose the Game :(";
       buttonDisable();
       playAgainButton();
-    } else if (numberOfRounds == 5 && playerScore == computerScore) {
+    } else if (playerScore == 5 && computerScore == 5) {
       document.getElementById("tieGame").innerHTML = "The Game is a Tie.";
       buttonDisable();
       playAgainButton();
@@ -109,11 +108,9 @@
 
     if (playerSelection == 'rock') {
       if (computerSelection == 'scissors') {
-        numberOfRounds++;
         playerScore++;
         return roundStats();
       } else if (computerSelection == 'paper') {
-        numberOfRounds++;
         computerScore++;
         return roundStats();
       } else {
@@ -124,11 +121,9 @@
       
     if (playerSelection == 'paper') {
       if (computerSelection == 'rock') {
-        numberOfRounds++;
         playerScore++;
         return roundStats();
       } else if (computerSelection == 'scissors') {
-        numberOfRounds++;
         computerScore++;
         return roundStats();
       } else {
@@ -139,15 +134,12 @@
       
     if (playerSelection == 'scissors') {
       if (computerSelection == 'paper') {
-        numberOfRounds++;
         playerScore++;
         return roundStats();
       } else if (computerSelection == 'rock') {
-        numberOfRounds++;
         computerScore++;
         return roundStats();
       } else {
-        numberOfRounds++;
         return roundStats();
       }
     }
